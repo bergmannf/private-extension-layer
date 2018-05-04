@@ -1,0 +1,7 @@
+(defun ruby-align-hash ()
+  (interactive)
+  (if (not (region-active-p))
+      (return)
+    (let ((start (region-beginning))
+          (end (region-end)))
+      (align-regexp start end ":\\(\\s-*\\)"))))
